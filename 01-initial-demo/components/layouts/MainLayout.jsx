@@ -16,13 +16,13 @@ export const MainLayout = ({pagina, href, retorno}) => {
         <Navbar />
 
         <main className={styles.main}>
-            <h1 className={styles.title}>
+            <h1 className={'title'}>
             Ir a <Link href={href}>{retorno}</Link>
             </h1>
 
-            <p className={styles.description}>
+            <p className={'description'}>
             Get started by editing{' '}
-            <code className={styles.code}>pages/{pagina.toLowerCase()}.js</code>
+            <code className={'code'}>pages/{pagina.toLowerCase()}.js</code>
             </p>
 
         </main>
