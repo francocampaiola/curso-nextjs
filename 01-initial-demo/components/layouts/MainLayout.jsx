@@ -1,32 +1,26 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from './MainLayout.module.css'
-import { Navbar }  from '../Navbar.jsx'
+import Head from 'next/head';
+import { Navbar } from '../Navbar';
 
-export const MainLayout = ({pagina, href, retorno}) => {
-  return (
-    <div>
+
+import styles from './MainLayout.module.css';
+
+export const MainLayout = ({ children }) => {
+    return (
         <div className={styles.container}>
-        <Head>
-            <title>Sitio - Franco</title>
-            <meta name="description" content="{pagina} Page" />
+          
+          <Head>
+            <title>Home - Fernando</title>
+            <meta name="description" content="Home Page" />
             <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <Navbar />
-
-        <main className={styles.main}>
-            <h1 className={'title'}>
-            Ir a <Link href={href}>{retorno}</Link>
-            </h1>
-
-            <p className={'description'}>
-            Get started by editing{' '}
-            <code className={'code'}>pages/{pagina.toLowerCase()}.js</code>
-            </p>
-
-        </main>
+          </Head>
+        
+          <Navbar />
+    
+          <main className={styles.main}>
+    
+            { children }
+    
+          </main>     
         </div>
-    </div>
-  )
-}
+      )
+};
